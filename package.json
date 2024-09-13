@@ -29,7 +29,7 @@
     "lodash": "^4.17.21"
   },
   "name": "nest-gfc",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "Nest Library - Pagination.",
   "repository": {
     "type": "git",
