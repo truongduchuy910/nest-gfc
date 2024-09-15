@@ -63,3 +63,18 @@ export interface PagingProps<T> {
   limit?: number;
   skip?: number;
 }
+
+export interface Key<T> {
+  key?: keyof T;
+  keyBuilder?: any;
+  keyOrder?: any;
+}
+
+export interface PagingPropsV3<T> {
+  filter: any;
+  primary?: Key<T>; //  default _id
+  secondary?: Key<T>; // unique
+  search?: string;
+  paging?: PagingInput;
+  toEntity?: any;
+}
