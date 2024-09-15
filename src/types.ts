@@ -1,4 +1,5 @@
 import type { FilterQuery, SortOrder } from 'mongoose';
+import { PagingInput } from './cursor.entity';
 
 export interface FindManyProps<T = any> {
   filter: FilterQuery<T>;
@@ -44,6 +45,11 @@ export interface PagingProps<T> {
   key?: keyof T;
   keyBuilder?: any;
   keyOrder?: any;
+  sort?: {
+    key?: keyof T;
+    keyBuilder?: any;
+    keyOrder?: any;
+  };
 
   order?: SortOrder;
   search?: string;
@@ -51,5 +57,9 @@ export interface PagingProps<T> {
     after?: any;
     before?: any;
   };
+
+  paging?: PagingInput;
   toEntity?: any;
+  limit?: number;
+  skip?: number;
 }
